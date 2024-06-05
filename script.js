@@ -21,14 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     
     function fetchWeatherUpdate(city) {
-        fetch(`http://api.openweathermap.org/data/2.5/forecast?id=524901&q=${city}&units=metric&appid=b581abf8cb358cde51fe9fd675c39d7b`)
+        fetch(`https://api.openweathermap.org/data/2.5/forecast?id=524901&q=${city}&units=metric&appid=b581abf8cb358cde51fe9fd675c39d7b`)
         .then(Response => Response.json())
     
         .then(data => {
             console.log(data);
             const cityName = document.getElementById('city-name').textContent = data.city.name;
             const temp = document.getElementById('temperature').textContent = data.list[0].main.temp + '°C';
-            const iconUrl = `http://openweathermap.org/img/w/${data.list[0].weather[0].icon}.png`;
+            const iconUrl = `https://openweathermap.org/img/w/${data.list[0].weather[0].icon}.png`;
             const imgElement = document.getElementById("weather-icon");
             imgElement.src = iconUrl;
             imgElement.style.display = "block";
