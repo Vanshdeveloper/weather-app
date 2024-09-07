@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::placeholder {
+    color: #f0f0f0;
+}
+
+body {
+    height: 100vh;
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(-45deg, #6745ff, #ea4dff);
+}
+
+.wrapper {
+    padding: 30px 0;
+    width: 300px;
+    /* filter: blur(1px); */
+    background: #00000004;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+}
+
+/* Header Section */
+
+header {
+    width: 100%;
+    /* background-color: #ffffff; */
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+header h1 {
+    font-size: 25px;
+}
+
+.inpCity {
+    height: 40px;
+    display: flex;
+    border-radius: 50px;
+    border: 2px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#citySrch-bar {
+    background: transparent;
+    width: 90%;
+    border-radius: 50px;
+    padding: 0 20px;
+    border: none;
+}
+
+#citySrch-bar:focus {
+    background: transparent;
+}
+
+#citySrch-btn {
+    width: 40px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border: none;
+}
+
+#citySrch-btn img {
+    width: 22px;
+}
+
+/* Main Section */
+
+main {
+    width: 100%;
+    padding: 20px;
+    /* background: #50c8ff; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.current-weather {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+main .current-weather #city-name {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.current-weather .cw-d {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.current-weather .cw-d .img {
+    position: absolute;
+}
+
+#temperature {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.additional-info {
+    padding: 60px 0 0 0;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.additional-info,
+.forecast {
+    width: 100%;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .inpCity {
+        width: 80%;
+    }
+
+    #temperature {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    #temperature {
+        font-size: 2rem;
+    }
+}

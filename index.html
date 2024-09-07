@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+
+    <div class="wrapper">
+    <header>
+        <form class="inpCity">
+            <input type="text" id="citySrch-bar" placeholder="Enter city name">
+            <button id="citySrch-btn">
+                <img src="search-icon.png" alt="search-icon-png">
+            </button>
+        </form>
+    </header>
+
+    <main>
+        <section class="current-weather">
+            <h2 id="city-name">City Name</h2> 
+            <div id="temperature">00</div>
+            <div class="cw-d">
+                <img id="weather-icon" src="" alt="Weather Icon" style="display: none;">
+                <div id="weather-description">--</div>
+            </div>
+        </section>
+
+        <section class="additional-info">
+            <div>Humidity: <span id="humidity">--%</span></div>
+            <div>Wind Speed: <span id="wind-speed">-- km/h</span></div>
+        </section>
+    </main>
+</div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
